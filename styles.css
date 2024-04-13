@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+hr {
+    margin-top: 0.75rem;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas:
+    "aside header header header header"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main";
+}
+
+header {
+    grid-area: header;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header p {
+    font-weight: bold;
+}
+
+.headerSection {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerSection div {
+    display: flex;
+}
+
+#search {
+    border: none;
+    border-radius: 20px;
+    background-color: lightgray;
+    padding: 5px;
+    min-width: 500px;
+}
+
+#userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.litteProfileImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#mainProfileImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.hiThereContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hiThere {
+    font-size: 0.75rem;
+}
+
+button {
+    background-color: #075985;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+}
+
+main {
+    grid-area: main;
+    background-color: lightgray;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.mainContainer {
+    margin-top: 20px
+}
+
+.mainTitle {
+    margin-bottom: 20px;
+}
+
+.mainAsideContainer {
+    margin-top: 65px
+}
+
+.projectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.projectCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white;
+    border-left: 8px solid goldenrod;
+    border-radius: 10px;
+    height: 320px;
+    width: 45%;
+}
+
+.projectCards div h3 {
+    margin: 10px
+}
+
+.projectCards div p {
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.cardIconsContainer {
+    align-self: flex-end;
+}
+
+.cardIcons {
+    height: 24px;
+    margin-left: 5px;
+}
+
+.announcementsCard {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 5px;
+    gap: 10px;
+}
+
+.announcementsCard h3 {
+    font-size: 1rem;
+    margin-top: 10px;;
+}
+
+.trending {
+    margin-top: 35px;
+}
+
+.trendUser {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.trendProject {
+    font-size: 0.8rem;
+}
+
+
+.trendingPost {
+    display: flex;
+    margin: 20px 0;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbtn {
+    display: none;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #075985;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 15px;
+}
+
+aside section {
+    position: fixed;
+}
+
+aside section div {
+    margin-left: 30px;
+}
+
+aside div h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    gap: 30px;
+}
+
+aside nav div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+    padding: 40px 0;
+}
+
+aside nav div ul li {
+    display: flex;
+    gap: 10px;
+}
+
+aside nav div ul li img {
+    height: 24px;
+}
+
+aside nav div ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    #search {
+        min-width: 250px;
+        width: 100%;
+    }
+
+    .search-user {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .userAccount {
+        display: none !important;
+    }
+
+    .projectCards {
+        width: 100%;
+    }
+    .litteProfileImg, #mainProfileImg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbtn {
+        display: block;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        margin-left: 1rem;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+
+    aside {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        margin: 20px;
+        width: 70%;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px #075985;
+        z-index: 1;
+        height: 90%;
+    }
+
+    aside section {
+    }
+
+    aside section div {
+
+    }
+
+}
